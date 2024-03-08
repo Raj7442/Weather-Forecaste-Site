@@ -1,41 +1,83 @@
+/* Import fonts */
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital@1&family=Poppins:ital,wght@1,600&display=swap');
 
+/* Basic Styles */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    background: linear-gradient(300deg, #ced1d6, #bfc0c0);
-    font-family: "Poppins", sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    min-height: 100vh;
-    background-image: url('https://source.unsplash.com/1600x900/?landscape');
+  background: linear-gradient(300deg, #ced1d6, #bfc0c0);
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  min-height: 100vh;
+  background-image: url('https://source.unsplash.com/1600x900/?landscape');
+  background-size: cover; /* Ensure background image covers the viewport */
 }
 
+/* Input Field */
 input {
-    background-color: #fff;
-    border: none;
-    border-radius: 25px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    font-family: inherit;
-    font-size: 1rem;
-    padding: 1rem;
-    min-width: 300px;
+  background-color: #fff;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 1rem;
+  min-width: 300px;
 }
 
 input:focus {
-    outline: none;
+  outline: none;
 }
 
+/* Weather Display */
 .weather {
-    font-size: 2rem;
-    text-align: center;
+  font-size: 2rem;
+  text-align: center;
 }
 
+.weather h2 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+/* Interactive Features */
+.search-container {
+  margin-bottom: 2rem; /* Add space between search and weather display */
+}
+
+.search-button {
+  background-color: #3498db; /* Blue button */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer; /* Indicate clickable button */
+  margin-left: 10px; /* Add space between input and button */
+}
+
+.search-button:hover {
+  background-color: #2980b9; /* Darker blue on hover */
+}
+
+.error-message {
+  color: #e74c3c; /* Red error message */
+  font-weight: bold;
+  margin-top: 1rem;
+  display: none; /* Initially hide the error message */
+}
+
+/* Title Styles (New) */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
 .weather h2 {
     display: flex;
     align-items: center;
